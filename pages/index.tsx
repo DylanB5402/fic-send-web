@@ -12,7 +12,7 @@ const Home: NextPage = () => {
         dark
       >
         <NavbarBrand>
-          Send a Fic!
+          Send a Fic to your Kindle!
         </NavbarBrand>
       </Navbar>
       <Container>
