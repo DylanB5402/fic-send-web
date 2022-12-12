@@ -6,19 +6,25 @@ import axios from 'axios';
 const FicSubmissionForm = () => {
 
     const [url, setUrl] = useState('');
+    const [successState, setSuccessState] = useState('');
 
     const onInputChange: ChangeEventHandler<HTMLInputElement> = (e) => {
         setUrl(e.currentTarget.value);
     }
 
     const onSubmit = async () => {
-       const response = await axios.post(
+        const response = await axios.post(
             '/api/url', 
             {
                 url
             }
         );
-       console.log(response.data);
+        console.log(response.data);
+        if(response.data.urlAccepted) {
+            setSuccessState("Successful!")
+        } else {
+            setSuccessState("Failure, please try again")
+        }
     }
 
     return (
@@ -32,6 +38,9 @@ const FicSubmissionForm = () => {
                 >
                     Submit
                 </Button>
+                <p>
+                    {successState}
+                </p>
             </Form>
     )
 
