@@ -7,6 +7,7 @@ const FicSubmissionForm = () => {
 
     const [url, setUrl] = useState('');
     const [successState, setSuccessState] = useState('');
+    const [fic, setFic] = useState('');
 
     const onInputChange: ChangeEventHandler<HTMLInputElement> = (e) => {
         setUrl(e.currentTarget.value);
@@ -22,8 +23,20 @@ const FicSubmissionForm = () => {
         console.log(response.data);
         if(response.data.urlAccepted) {
             setSuccessState("Successful!")
+            setFic(response.data.url)
         } else {
-            setSuccessState("Failure, please try again")
+            setSuccessState("Failure, please try again");
+            setFic('');
+        }
+    }
+
+    const sendFicStatus = () => {
+        if (fic) {
+            return(
+                <p>
+                    Sending fic: <a href={fic}>{fic}</a>
+                </p>
+            )
         }
     }
 
@@ -41,6 +54,7 @@ const FicSubmissionForm = () => {
                 <p>
                     {successState}
                 </p>
+                {sendFicStatus()}
             </Form>
     )
 

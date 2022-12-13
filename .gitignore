@@ -37,5 +37,6 @@ next-env.d.ts
 
 # python 
 worker/venv/*
-
+worker/config.py
+worker/__pycache__/*
 
