@@ -32,11 +32,13 @@ yarn-error.log*
 .vercel
 
 # typescript
-*.tsbuildinfo
-next-env.d.ts
+app/*.tsbuildinfo
+app/next-env.d.ts
+app/node_modules/*
 
 # python 
 worker/venv/*
 worker/config.py
 worker/__pycache__/*
+
 
