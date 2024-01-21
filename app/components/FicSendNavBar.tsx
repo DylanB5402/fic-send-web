@@ -1,16 +1,21 @@
-import { Navbar, NavbarBrand } from 'reactstrap'
+import { Nav, NavItem, NavLink, Navbar, NavbarBrand } from 'reactstrap'
 
 const FicSendNavBar = () => {
   return (
     <>
       <Navbar
         className='my-2'
-        color='secondary'
-        dark
+        color='light'
+        light
       >
-        <NavbarBrand>
-          Send a Fic to your Kindle!
-        </NavbarBrand>
+        <Nav className='container-fluid'>
+          <NavbarBrand>
+            Fic-Send-Web
+          </NavbarBrand>
+          <NavLink href='/archive'>Fic Archive</NavLink>
+          <NavLink href='/'> Send a Fic </NavLink>
+        </Nav>
+
       </Navbar>
     </>
   )

@@ -41,4 +41,4 @@ worker/venv/*
 worker/config.py
 worker/__pycache__/*
 
-
+app/.next/*
