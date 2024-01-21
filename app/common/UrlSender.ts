@@ -1,4 +1,4 @@
-import WebSocket from 'ws';
+import WebSocket from 'ws'
 
-const urlSenderWs = new WebSocket('ws://localhost:8765');
-export default urlSenderWs;
+const urlSenderWs = new WebSocket('ws://localhost:8765')
+export default urlSenderWs
