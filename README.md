@@ -8,6 +8,7 @@ Web App for downloading web fiction and sending it to my Kindle
 
 - Frontend (next.js)
 - Backend (next.js)
+     - ORM: Prisma
 - Downloader worker process (Python)
 
 ## Download flow
@@ -25,3 +26,4 @@ Web App for downloading web fiction and sending it to my Kindle
     - Worker informs client that the fic has been emailed via pusher
         - Client renders info
         - Marked as downloaded in database
+
