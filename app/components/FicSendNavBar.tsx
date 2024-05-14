@@ -12,8 +12,8 @@ const FicSendNavBar = () => {
           <NavbarBrand>
             Fic-Send-Web
           </NavbarBrand>
-          <NavLink href='/archive'>Fic Archive</NavLink>
-          <NavLink href='/'> Send a Fic </NavLink>
+          <NavLink href='/archive'>Archive</NavLink>
+          <NavLink href='/'>Send</NavLink>
         </Nav>
 
       </Navbar>
