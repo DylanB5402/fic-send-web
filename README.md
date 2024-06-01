@@ -26,4 +26,3 @@ Web App for downloading web fiction and sending it to my Kindle
     - Worker informs client that the fic has been emailed via pusher
         - Client renders info
         - Marked as downloaded in database
-
