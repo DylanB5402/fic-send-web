@@ -9,7 +9,7 @@ async def echo(websocket):
         downloader.send_fic(message, config.email_address, config.password, config.kindle_email)
 
 async def main():
-    async with websockets.serve(echo, "localhost", 8765):
+    async with websockets.serve(echo, "127.0.0.1", 8765):
         await asyncio.Future()  # run forever
 
 asyncio.run(main())
