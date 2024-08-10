@@ -1,0 +1,17 @@
+{
+    "apps": [
+        {
+            "name": "app",
+            "cwd": "./app",
+            "script": "npm",
+            "args" : "start"
+        },
+        {
+            "name": "worker",
+            "cwd": "./worker",
+            "script": "worker/worker.py",
+            "interpreter": "python3",
+            "pre-start": "pip install -r requirements.txt"
+        }
+    ]
+}
